@@ -1,0 +1,2 @@
+uvicorn[standard]
+uvloop; platform_system != "Windows"

@@ -1,2 +1,2 @@
 # muso
-A simple async API-Framework based on Marshmallow / Uvicorn / Starlette / Orjson.
+A simple, IDE-Friendly async JSON API-Framework based on **M**arshmallow / **U**vicorn / **S**tarlette / **O**rjson.

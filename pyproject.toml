@@ -1,0 +1,43 @@
+[project]
+name = "muso"
+description = "A simple async JSON API-Framework based on Marshmallow / Uvicorn / Starlette / Orjson."
+dynamic = ["version", "dependencies", "optional-dependencies"]
+requires-python = ">= 3.12"
+
+authors = [
+    {name = "M@gicAgCl(DEAD)", email = "wyqsmith@aegeanstudio.com"},
+]
+
+[tool.isort]
+multi_line_output = 4
+skip_gitignore = true
+
+[tool.setuptools.dynamic]
+version = {attr = "muso.__version__"}
+readme = {file = ["README.md"]}
+dependencies = {file = "requires/requirements.in"}
+
+[tool.setuptools.dynamic.optional-dependencies]
+uvicorn-standard = {file = "requires/uvicorn-standard.in"}
+mysql = {file = "requires/mysql.in"}
+postgres = {file = "requires/postgres.in"}
+redis = {file = "requires/redis.in"}
+valkey = {file = "requires/valkey.in"}
+
+[tool.bumpversion.parts.pre_l]
+values = ["dev", "rc", "final"]
+optional_value = "final"
+
+[tool.setuptools.packages.find]
+include = ["muso*"]
+
+[tool.flake8]
+max-line-length = 79
+exclude = [
+    ".git",
+    "__pycache__",
+    "venv"
+]
+extend-ignore = [
+   "E203"
+]

@@ -1,0 +1,19 @@
+# Debug
+ipython
+
+# Lint && Test
+flake8
+flake8-bugbear
+flake8-builtins
+flake8-commas
+flake8-isort
+flake8-pyproject
+flake8-quotes
+isort
+mypy
+pytest
+
+# VCS
+bump-my-version
+setuptools_scm
+twine
